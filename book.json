@@ -1,0 +1,27 @@
+{
+    "language": "zh-hans",
+    "plugins": [
+        "anchor-navigation-ex",
+        "expandable-chapters-small",
+        "-lunr",
+        "-search",
+        "search-plus",
+        "splitter",
+        "sectionx",
+        "todo",
+        "ace",
+        "edit-link"
+    ],
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false
+        },
+        "edit-link": {
+            "base": "https://github.com/bundery/java-notes/edit/master",
+            "label": "edit"
+        }
+    }
+}
