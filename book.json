@@ -10,7 +10,8 @@
         "sectionx",
         "todo",
         "ace",
-        "edit-link"
+        "edit-link",
+        "mermaid-gb3"
     ],
     "pluginsConfig": {
         "theme-default": {
