@@ -14,7 +14,7 @@ Logger通过`.`来表示继承关系，如`io.bundery`是`io.budery.dao`的父�
 - 如在logger中定义了`level="INFO"`，而在Appender中的过滤的是`WARN`及以上的，则只会输出`WARN`及以上的。
 - 如在logger中定义了`level="WARN"`，而在Appender中的过滤的是`INFO`及以上的，则只会输出`WARN`及以上的。
 
-```xml
+{%ace edit=false, lang='xml'%}
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
 	<Properties>
@@ -54,5 +54,5 @@ Logger通过`.`来表示继承关系，如`io.bundery`是`io.budery.dao`的父�
 			<AppenderRef ref="Console" />
 		</Root>
 	</Loggers>
-</Configuration>  
-```
+</Configuration>
+{%endace%}

@@ -18,7 +18,7 @@
     - final: 子类不能出现父类同名的final方法，无法被代理。
     - static: 假如代理了static方法，代理类的static方法不用创建代理类就能直接访问，那么`myMethodInterceptor.interceptor(...)`怎么传递proxy对象呢。
 
-```java
+{%ace edit=false, lang='java'%}
 //MethodInterceptor
 public class MyMethodInterceptor implements MethodInterceptor {
     //proxy: 代理对象 method:委托类中委托的方法对象 args:参数 methodProxy:代理方法的MethodProxy对象
@@ -46,11 +46,12 @@ public class Client {
 
 }
 
-```
+{%endace%}
 
 `enhancer.create();`这句代码先是生成了**委托类的子类**的二进制代码，生成的代理类为每个委托方法都生成了相应的俩个方法，以`add()`方法来讲，生成了一个重写的`add()`方法（内部调用myMethodInterceptor.intercept()），另外一个是`CGLIB$add$0()`方法(内部直接调用父类/委托类的原方法即:super.add())。
 
-```java
+
+{%ace edit=false, lang='java'%}
 //生成的代理类大致代码
 public class UserServiceImpl$CGLIB extends UserServiceImpl implements Factory
 {
@@ -69,5 +70,4 @@ public class UserServiceImpl$CGLIB extends UserServiceImpl implements Factory
 
     ...otherCode...
 }
-
-```
+{%endace%}
