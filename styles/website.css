@@ -1,8 +1,10 @@
-.book .book-body  {
-    font-family:"Fira Code Retina", "PingFang SC Heavy", "Microsoft YaHei UI", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+/* 字体 */
+.book .book-body {
+    font-family: "Fira Code Retina", "PingFang SC Heavy", "Microsoft YaHei UI", "Microsoft Yahei", Helvetica, Arial, sans-serif;
 }
 
-.markdown-section h2{
-	margin-top: 0em;
-	margin-bottom: 0em;
+/* 标题 */
+h1, h2 {
+    border-bottom: 1px solid #EFEAEA;
+    padding-bottom: 10px;
 }

@@ -49,6 +49,7 @@ session.save(user);
 tx.commit();                                  -->conn.commit();
 session.close();                              -->conn.close();
 ```
+
 所以Hibernate的Transcation很简单而已，就是调用了`conn.setAutoCommit(false)`而已，如果执行了这段代码，程序必须调用手动commit或者rollback操作数据才能提交，JDBC默认AutoCommit为true，即每次更新操作都会自动提交到数据库。
 
 ## Hibernate SessionFactory

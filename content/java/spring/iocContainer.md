@@ -1,6 +1,7 @@
 #Spring 容器
 
 springIOC容器的核心是ApplicationContext接口，实现类有ClasspathXmlApplicationContext，该容器可以读取xml文件，并初始化配置在文件中的bean，以及管理他们的整个声明周期。
+
 ## 获取容器对象
 
 1. 手动初始化容器
